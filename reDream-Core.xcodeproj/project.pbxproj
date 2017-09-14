@@ -924,20 +924,6 @@
 			remoteGlobalIDString = 3ECAC3B11F679CFB00E212E4;
 			remoteInfo = chdr;
 		};
-		3ECAC3DB1F681C3800E212E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E493B9C1F66474D0006F298 /* SDL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3ECAC3CF1F681C2500E212E4;
-			remoteInfo = "FLAC-Static";
-		};
-		3ECAC41E1F681D6D00E212E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E493B9C1F66474D0006F298 /* SDL.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3ECAC4061F681D5F00E212E4;
-			remoteInfo = "crypto-static";
-		};
 		3ECAC4431F68201E00E212E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8CAFA78F1785AA9900647A96 /* Project object */;
@@ -4800,6 +4786,7 @@
 		3E493DCA1F6652820006F298 /* libglad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E493DD91F66528C0006F298 /* libinih.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libinih.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E493E091F6654600006F298 /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6ABA9A1F6AD8C2006CDED9 /* math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = math.h; path = compat/core/math.h; sourceTree = "<group>"; };
 		3E7AB7CF1F66D80600149FA9 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = compat/core/config.h; sourceTree = "<group>"; };
 		3E8A15361F676F4B00E039BF /* OEhost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEhost.m; sourceTree = "<group>"; };
 		3E8A15391F6775ED00E039BF /* OEhost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEhost.h; sourceTree = "<group>"; };
@@ -4814,7 +4801,7 @@
 		8CAFA7B71785AF4200647A96 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		8CAFA7B81785AF4200647A96 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8CAFA7B91785AF4200647A96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8CAFC10F1785B63900647A96 /* reDream.temp_caseinsensitive_rename.oecoreplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reDream.temp_caseinsensitive_rename.oecoreplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CAFC10F1785B63900647A96 /* reDream-Core.oecoreplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "reDream-Core.oecoreplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAFC1221785B6C400647A96 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAFC1241785B6F700647A96 /* reDreamGameCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reDreamGameCore.h; sourceTree = "<group>"; };
 		8CAFC1251785B6F700647A96 /* reDreamGameCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reDreamGameCore.m; sourceTree = "<group>"; };
@@ -12636,8 +12623,6 @@
 				3E493CCA1F66474E0006F298 /* libSDL2.a */,
 				3E493CCC1F66474E0006F298 /* libSDL2.dylib */,
 				3E493CCE1F66474E0006F298 /* Standard DMG */,
-				3ECAC3DC1F681C3800E212E4 /* libFLAC-Static.a */,
-				3ECAC41F1F681D6D00E212E4 /* libcrypto-static.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -13134,6 +13119,7 @@
 		3E7AB7CE1F66CEEB00149FA9 /* Compatibility */ = {
 			isa = PBXGroup;
 			children = (
+				3E6ABA9A1F6AD8C2006CDED9 /* math.h */,
 				3E7AB7CF1F66D80600149FA9 /* config.h */,
 			);
 			name = Compatibility;
@@ -13153,7 +13139,7 @@
 		8CAFA79B1785AE2A00647A96 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8CAFC10F1785B63900647A96 /* reDream.temp_caseinsensitive_rename.oecoreplugin */,
+				8CAFC10F1785B63900647A96 /* reDream-Core.oecoreplugin */,
 				3E493DCA1F6652820006F298 /* libglad.a */,
 				3E493DD91F66528C0006F298 /* libinih.a */,
 				3E493E091F6654600006F298 /* libimgui.a */,
@@ -13471,9 +13457,9 @@
 			productReference = 3ECAC4271F681D9900E212E4 /* liblzma-static.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8CAFC10E1785B63900647A96 /* ReDream */ = {
+		8CAFC10E1785B63900647A96 /* reDream-Core */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8CAFC11E1785B63900647A96 /* Build configuration list for PBXNativeTarget "ReDream" */;
+			buildConfigurationList = 8CAFC11E1785B63900647A96 /* Build configuration list for PBXNativeTarget "reDream-Core" */;
 			buildPhases = (
 				8CAFC10B1785B63900647A96 /* Sources */,
 				8CAFC10C1785B63900647A96 /* Frameworks */,
@@ -13488,9 +13474,9 @@
 				3ECAC3951F6797DD00E212E4 /* PBXTargetDependency */,
 				3E493DF51F66539A0006F298 /* PBXTargetDependency */,
 			);
-			name = ReDream;
+			name = "reDream-Core";
 			productName = PPSSPP;
-			productReference = 8CAFC10F1785B63900647A96 /* reDream.temp_caseinsensitive_rename.oecoreplugin */;
+			productReference = 8CAFC10F1785B63900647A96 /* reDream-Core.oecoreplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -13586,7 +13572,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				8CAFC10E1785B63900647A96 /* ReDream */,
+				8CAFC10E1785B63900647A96 /* reDream-Core */,
 				8CBB42FF178C399D00FA270D /* Build & Install ReDream */,
 				3E493DC91F6652820006F298 /* glad */,
 				3E493DD81F66528C0006F298 /* inih */,
@@ -14253,20 +14239,6 @@
 			remoteRef = 3E493DB21F66474E0006F298 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3ECAC3DC1F681C3800E212E4 /* libFLAC-Static.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libFLAC-Static.a";
-			remoteRef = 3ECAC3DB1F681C3800E212E4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3ECAC41F1F681D6D00E212E4 /* libcrypto-static.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libcrypto-static.a";
-			remoteRef = 3ECAC41E1F681D6D00E212E4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -14575,7 +14547,7 @@
 		};
 		8CBB4304178C39D200FA270D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8CAFC10E1785B63900647A96 /* ReDream */;
+			target = 8CAFC10E1785B63900647A96 /* reDream-Core */;
 			targetProxy = 8CBB4303178C39D200FA270D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -15680,8 +15652,8 @@
 					"-framework",
 					AudioToolbox,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.openemu.ReDream;
-				PRODUCT_NAME = reDream.temp_caseinsensitive_rename;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.reDream-Core";
+				PRODUCT_NAME = "reDream-Core";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 				USE_HEADERMAP = NO;
@@ -15792,8 +15764,8 @@
 					"-framework",
 					AudioToolbox,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.openemu.ReDream;
-				PRODUCT_NAME = reDream.temp_caseinsensitive_rename;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.reDream-Core";
+				PRODUCT_NAME = "reDream-Core";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 				USE_HEADERMAP = NO;
@@ -15914,7 +15886,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8CAFC11E1785B63900647A96 /* Build configuration list for PBXNativeTarget "ReDream" */ = {
+		8CAFC11E1785B63900647A96 /* Build configuration list for PBXNativeTarget "reDream-Core" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CAFC11F1785B63900647A96 /* Debug */,

@@ -25,7 +25,7 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "ReDreamGameCore.h"
+#import "reDreamGameCore.h"
 #import <OpenEmuBase/OERingBuffer.h>
 #import <OpenGL/gl.h>
 
@@ -180,7 +180,7 @@ void play_audio(int16_t *data, int frames) {
 
 - (oneway void)didMoveDCJoystickDirection:(OEDCButton)button withValue:(CGFloat)value forPlayer:(NSUInteger)player
 {
-    input_set( player - 1, buttonToIdentifier[button].dckey, value * 100);
+    input_set( player - 1, buttonToIdentifier[button].dckey, value);
 }
 
 -(oneway void)didPushDCButton:(OEDCButton)button forPlayer:(NSUInteger)player

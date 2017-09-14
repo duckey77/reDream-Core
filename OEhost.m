@@ -1,4 +1,4 @@
-#include "ReDreamGameCore.h"
+#include "reDreamGameCore.h"
 #include "OEhost.h"
 #import <OpenEmuBase/OERingBuffer.h>
 
