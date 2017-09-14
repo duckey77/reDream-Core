@@ -5,9 +5,14 @@
 #include <math.h>
 #include <stdint.h>
 
+#undef MIN
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
+
+#undef MAX
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 #define CLAMP(x, lo, hi) MAX((lo), MIN((hi), (x)))
+
+#undef ABS
 #define ABS(x) ((x) < 0 ? -(x) : (x))
 
 #define ALIGN_UP(v, alignment) (((v) + (alignment)-1) & ~((alignment)-1))
