@@ -1,0 +1,4 @@
+[submodule "redream"]
+	path = redream
+	url = https://github.com/inolen/redream.git
+	branch = master
