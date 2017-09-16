@@ -6,6 +6,4 @@
 #define HAVE_STRNLEN
 #define HAVE_STRNSTR
 
-#define NDEBUG
-
 #endif

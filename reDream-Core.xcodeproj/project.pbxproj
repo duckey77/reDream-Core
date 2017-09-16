@@ -15600,6 +15600,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				LLVM_LTO = NO;
 				OTHER_CFLAGS = (
+					"-DNDEBUG",
 					"-fms-extensions",
 					"-Wall",
 					"-Wextra",
@@ -15616,6 +15617,7 @@
 					"'-std=gnu11'",
 				);
 				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
 					"-fms-extensions",
 					"-Wall",
 					"-Wextra",
@@ -15637,20 +15639,6 @@
 					"-lpthread",
 					"-lm",
 					"-liconv",
-					"-framework",
-					CoreVideo,
-					"-framework",
-					Cocoa,
-					"-framework",
-					IOKit,
-					"-framework",
-					ForceFeedback,
-					"-framework",
-					Carbon,
-					"-framework",
-					CoreAudio,
-					"-framework",
-					AudioToolbox,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.reDream-Core";
 				PRODUCT_NAME = "reDream-Core";
@@ -15712,6 +15700,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				LLVM_LTO = NO;
 				OTHER_CFLAGS = (
+					"-DNDEBUG",
 					"-fms-extensions",
 					"-Wall",
 					"-Wextra",
@@ -15728,6 +15717,7 @@
 					"'-std=gnu11'",
 				);
 				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
 					"-fms-extensions",
 					"-Wall",
 					"-Wextra",
@@ -15749,20 +15739,6 @@
 					"-lpthread",
 					"-lm",
 					"-liconv",
-					"-framework",
-					CoreVideo,
-					"-framework",
-					Cocoa,
-					"-framework",
-					IOKit,
-					"-framework",
-					ForceFeedback,
-					"-framework",
-					Carbon,
-					"-framework",
-					CoreAudio,
-					"-framework",
-					AudioToolbox,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openemu.reDream-Core";
 				PRODUCT_NAME = "reDream-Core";
