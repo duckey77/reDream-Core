@@ -110,7 +110,11 @@ struct {
 
 - (void)executeFrame
 {
-    if(!_isInitialized)
+    if(_isInitialized)
+    {
+        renderFrame();
+    }
+    else
     {
         const char *dataPath = [[self supportDirectoryPath] fileSystemRepresentation];
         redream_host = host_create(dataPath);
@@ -118,10 +122,6 @@ struct {
         load_game(romPath.fileSystemRepresentation);
 
         _isInitialized = true;
-    }
-    else
-    {
-        renderFrame();
     }
 }
 
@@ -180,7 +180,12 @@ void play_audio(int16_t *data, int frames) {
 
 - (oneway void)didMoveDCJoystickDirection:(OEDCButton)button withValue:(CGFloat)value forPlayer:(NSUInteger)player
 {
-    input_set( player - 1, buttonToIdentifier[button].dckey, value);
+    if (button == OEDCAnalogUp || button == OEDCAnalogLeft)
+         value *= -32767;
+    else
+        value *= 32767;
+
+    input_set( player - 1, buttonToIdentifier[button].dckey, value );
 }
 
 -(oneway void)didPushDCButton:(OEDCButton)button forPlayer:(NSUInteger)player
