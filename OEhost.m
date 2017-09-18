@@ -36,22 +36,18 @@ void audio_push(struct host *base, const int16_t *data, int frames) {
  * video
  */
 void renderFrame() {
-
     /* render emulator output first */
-    emu_render_frame(oe_emu, VIDEO_DEFAULT_WIDTH, VIDEO_DEFAULT_HEIGHT);    
+    emu_render_frame(oe_emu, VIDEO_DEFAULT_WIDTH, VIDEO_DEFAULT_HEIGHT);
+
+    /* flip profiler at end of frame */
+    prof_flip(time_nanoseconds());
 }
 
 /*
  * input
  */
-void input_set( int port, int button, float value){
-    if (oe_host->input_keydown) {
-        oe_host->input_keydown(oe_host->userdata, port, button, value);
-    }
-}
-
-void input_poll(struct host *base) {
-    struct OE_host *host = OE_HOST(base);
+void input_set( int port, int key, float value) {
+        on_input_keydown(oe_host, port, key, value);
 }
 
 /*
@@ -80,6 +76,6 @@ struct OE_host* host_create(const char* supportPath) {
     return oe_host;
 }
 
-void load_game(const char *path){
+void load_game(const char *path) {
     emu_load_game(oe_emu, path);
 }
