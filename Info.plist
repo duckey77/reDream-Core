@@ -23,7 +23,7 @@
 	<key>NSPrincipalClass</key>
 	<string>OEGameCoreController</string>
 	<key>OEGameCoreClass</key>
-	<string>ReDreamGameCore</string>
+	<string>reDreamGameCore</string>
 	<key>OEGameCoreOptions</key>
 	<dict>
 		<key>openemu.system.dc</key>

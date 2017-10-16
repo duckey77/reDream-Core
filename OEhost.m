@@ -28,21 +28,18 @@ void audio_push(struct host *base, const int16_t *data, int frames) {
 /*
  * video
  */
-void video_set_fullscreen(struct host *base, int fullscreen) {}
-
-int video_is_fullscreen(struct host *base) {
-    return 0;
-}
-
-int video_can_fullscreen(struct host *base) {
-    return 0;
+void renderFrame() {
+    /* render emulator output first */
+    //emu_render_frame(oe_emu, VIDEO_DEFAULT_WIDTH, VIDEO_DEFAULT_HEIGHT);
+    emu_render_frame(oe_emu);
 }
 
 /*
  * input
  */
 void input_set( int port, int key, float value) {
-    on_input_keydown(oe_host, port, key, value);
+   // input_keydown(oe_host, port, key, value);
+     emu_keydown(oe_emu, port, key, value);
 }
 
 /*
@@ -53,29 +50,18 @@ struct OE_host* host_create(const char* supportPath) {
 
     fs_set_appdir(supportPath);
 
-    char userdir[PATH_MAX];
-    int r = fs_userdir(userdir, sizeof(userdir));
-    CHECK(r);
-
-    /* load base options from config */
-    char config[PATH_MAX] = {0};
-    snprintf(config, sizeof(config), "%s" PATH_SEPARATOR "config", supportPath);
-    options_read(config);
-
     int res = gladLoadGL();
 
-    oe_host->video_rb = r_create();
+    oe_host->video_rb = r_create(VIDEO_DEFAULT_WIDTH, VIDEO_DEFAULT_HEIGHT);
 
-    oe_emu = emu_create(BASE_HOST(oe_host), oe_host->video_rb);
+    oe_emu = emu_create(BASE_HOST(oe_host));
 
+    emu_vid_created(oe_emu, oe_host->video_rb);
+
+    //, oe_host->video_rb
     return oe_host;
 }
 
 void load_game(const char *path) {
-    emu_load_game(oe_emu, path);
-}
-
-void renderFrame() {
-    /* render emulator output first */
-    emu_render_frame(oe_emu, VIDEO_DEFAULT_WIDTH, VIDEO_DEFAULT_HEIGHT);
+    emu_load(oe_emu, path);
 }

@@ -49,7 +49,6 @@
 		3E492BF61F6643120006F298 /* disc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492AF91F6638D80006F298 /* disc.c */; };
 		3E492BF71F6643120006F298 /* gdi.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492AFB1F6638D80006F298 /* gdi.c */; };
 		3E492BF81F6643120006F298 /* gdrom.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492AFD1F6638D80006F298 /* gdrom.c */; };
-		3E492BF91F6643120006F298 /* patch.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492B021F6638D80006F298 /* patch.c */; };
 		3E492BFA1F6643120006F298 /* holly.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492B061F6638D80006F298 /* holly.c */; };
 		3E492BFB1F6643120006F298 /* controller.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492B0B1F6638D80006F298 /* controller.c */; };
 		3E492BFC1F6643120006F298 /* maple.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492B0C1F6638D80006F298 /* maple.c */; };
@@ -106,6 +105,8 @@
 		3E493E151F6654C20006F298 /* INIReaderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E49364F1F66474B0006F298 /* INIReaderTest.cpp */; };
 		3E493E211F66570A0006F298 /* libglad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E493DCA1F6652820006F298 /* libglad.a */; };
 		3E493E231F66570A0006F298 /* libinih.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E493DD91F66528C0006F298 /* libinih.a */; };
+		3E6811991F8A8D9500DF7251 /* stats.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6811951F8A8D9400DF7251 /* stats.c */; };
+		3E68119A1F8A8D9500DF7251 /* options.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6811971F8A8D9400DF7251 /* options.c */; };
 		3E8A15381F676F4B00E039BF /* OEhost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A15361F676F4B00E039BF /* OEhost.m */; };
 		3E92B1C31F670ABA009DEC25 /* rb_tree.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492ACE1F6638D80006F298 /* rb_tree.c */; };
 		3E92B1C41F670B31009DEC25 /* emulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E492B841F6638D80006F298 /* emulator.c */; };
@@ -387,8 +388,6 @@
 		3E492AFE1F6638D80006F298 /* gdrom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gdrom.h; sourceTree = "<group>"; };
 		3E492B001F6638D80006F298 /* gdrom_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gdrom_types.h; sourceTree = "<group>"; };
 		3E492B011F6638D80006F298 /* iso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iso.h; sourceTree = "<group>"; };
-		3E492B021F6638D80006F298 /* patch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = patch.c; sourceTree = "<group>"; };
-		3E492B031F6638D80006F298 /* patch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = patch.h; sourceTree = "<group>"; };
 		3E492B061F6638D80006F298 /* holly.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = holly.c; sourceTree = "<group>"; };
 		3E492B071F6638D80006F298 /* holly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = holly.h; sourceTree = "<group>"; };
 		3E492B091F6638D80006F298 /* holly_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = holly_types.h; sourceTree = "<group>"; };
@@ -3069,11 +3068,15 @@
 		3E493DCA1F6652820006F298 /* libglad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E493DD91F66528C0006F298 /* libinih.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libinih.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E493E091F6654600006F298 /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6811951F8A8D9400DF7251 /* stats.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stats.c; path = redream/src/stats.c; sourceTree = "<group>"; };
+		3E6811961F8A8D9400DF7251 /* stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stats.h; path = redream/src/stats.h; sourceTree = "<group>"; };
+		3E6811971F8A8D9400DF7251 /* options.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = options.c; path = redream/src/options.c; sourceTree = "<group>"; };
+		3E6811981F8A8D9500DF7251 /* options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = options.h; path = redream/src/options.h; sourceTree = "<group>"; };
+		3E68119B1F8BD85400DF7251 /* OEDCSystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEDCSystemResponderClient.h; path = ../OpenEmu/Dreamcast/OEDCSystemResponderClient.h; sourceTree = "<group>"; };
 		3E6ABA9A1F6AD8C2006CDED9 /* math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = math.h; path = compat/core/math.h; sourceTree = "<group>"; };
 		3E7AB7CF1F66D80600149FA9 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = compat/core/config.h; sourceTree = "<group>"; };
 		3E8A15361F676F4B00E039BF /* OEhost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OEhost.m; sourceTree = "<group>"; };
 		3E8A15391F6775ED00E039BF /* OEhost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEhost.h; sourceTree = "<group>"; };
-		3E8A153A1F6775FB00E039BF /* OEDCSystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEDCSystemResponderClient.h; sourceTree = "<group>"; };
 		3E8A16811F67918C00E039BF /* libzlib-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libzlib-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECAC37D1F6796E800E212E4 /* libcapstone-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libcapstone-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECAC3B21F679CFB00E212E4 /* libchdr-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libchdr-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3179,6 +3182,10 @@
 		3E4928721F66365A0006F298 /* redream */ = {
 			isa = PBXGroup;
 			children = (
+				3E6811971F8A8D9400DF7251 /* options.c */,
+				3E6811981F8A8D9500DF7251 /* options.h */,
+				3E6811951F8A8D9400DF7251 /* stats.c */,
+				3E6811961F8A8D9400DF7251 /* stats.h */,
 				3E492C2E1F6647470006F298 /* deps */,
 				3E492AAB1F6638D80006F298 /* core */,
 				3E492ADD1F6638D80006F298 /* file */,
@@ -3335,8 +3342,6 @@
 				3E492AFE1F6638D80006F298 /* gdrom.h */,
 				3E492B001F6638D80006F298 /* gdrom_types.h */,
 				3E492B011F6638D80006F298 /* iso.h */,
-				3E492B021F6638D80006F298 /* patch.c */,
-				3E492B031F6638D80006F298 /* patch.h */,
 			);
 			path = gdrom;
 			sourceTree = "<group>";
@@ -8816,7 +8821,7 @@
 		8CAFC10A1785B60F00647A96 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3E8A153A1F6775FB00E039BF /* OEDCSystemResponderClient.h */,
+				3E68119B1F8BD85400DF7251 /* OEDCSystemResponderClient.h */,
 				3E7AB7CE1F66CEEB00149FA9 /* Compatibility */,
 				8CAFC1241785B6F700647A96 /* reDreamGameCore.h */,
 				8CAFC1251785B6F700647A96 /* reDreamGameCore.m */,
@@ -9368,6 +9373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E8A15381F676F4B00E039BF /* OEhost.m in Sources */,
+				3E6811991F8A8D9500DF7251 /* stats.c in Sources */,
 				3E492BDE1F6643120006F298 /* assert.c in Sources */,
 				3E492BDF1F6643120006F298 /* bitmap.c in Sources */,
 				3E492BE01F6643120006F298 /* exception_handler.c in Sources */,
@@ -9402,7 +9408,6 @@
 				3E492BF61F6643120006F298 /* disc.c in Sources */,
 				3E492BF71F6643120006F298 /* gdi.c in Sources */,
 				3E492BF81F6643120006F298 /* gdrom.c in Sources */,
-				3E492BF91F6643120006F298 /* patch.c in Sources */,
 				3E492BFA1F6643120006F298 /* holly.c in Sources */,
 				3E492BFB1F6643120006F298 /* controller.c in Sources */,
 				3E492BFC1F6643120006F298 /* maple.c in Sources */,
@@ -9413,6 +9418,7 @@
 				3E492C011F6643120006F298 /* tex.c in Sources */,
 				3E492C021F6643120006F298 /* tr.c in Sources */,
 				3E492C031F6643120006F298 /* boot.c in Sources */,
+				3E68119A1F8A8D9500DF7251 /* options.c in Sources */,
 				3E492C041F6643120006F298 /* flash.c in Sources */,
 				3E492C051F6643120006F298 /* scheduler.c in Sources */,
 				3E492C061F6643120006F298 /* sh4.c in Sources */,
@@ -10515,6 +10521,7 @@
 					"'ARCH_X64=1'",
 					"'COMPILER_CLANG=1'",
 					HAVE_GDBSERVER,
+					"NDEBUG\n",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
@@ -10533,6 +10540,7 @@
 					"\"$(SRCROOT)/redream/deps/glad/include\"",
 					"\"$(SRCROOT)/redream/deps/gdb_server\"",
 					"\"$(SRCROOT)/redream/deps/inih\"",
+					"\"$(SRCROOT)/../openemu/Dreamcast\"",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
@@ -10616,6 +10624,7 @@
 					"'ARCH_X64=1'",
 					"'COMPILER_CLANG=1'",
 					HAVE_GDBSERVER,
+					"NDEBUG\n",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
@@ -10634,6 +10643,7 @@
 					"\"$(SRCROOT)/redream/deps/glad/include\"",
 					"\"$(SRCROOT)/redream/deps/gdb_server\"",
 					"\"$(SRCROOT)/redream/deps/inih\"",
+					"\"$(SRCROOT)/../openemu/Dreamcast\"",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";

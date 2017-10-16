@@ -33,10 +33,10 @@
 
 #define SAMPLERATE 44100
 
-__weak ReDreamGameCore *_current;
+__weak reDreamGameCore *_current;
 
 
-@interface ReDreamGameCore () <OEDCSystemResponderClient>
+@interface reDreamGameCore () <OEDCSystemResponderClient>
 {
     uint16_t *_soundBuffer;
     int videoWidth, videoHeight;
@@ -51,7 +51,7 @@ __weak ReDreamGameCore *_current;
 
 struct {
     OEDCButton button;
-    enum keycode dckey;
+    int dckey;
 } buttonToIdentifier[OEDCButtonCount] = {
     { OEDCButtonUp, K_CONT_DPAD_UP },
     { OEDCButtonDown, K_CONT_DPAD_DOWN },
@@ -70,9 +70,9 @@ struct {
     { OEDCAnalogRight,  K_CONT_JOYX },
 };
 
-@implementation ReDreamGameCore
+@implementation reDreamGameCore
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
 
@@ -114,7 +114,6 @@ struct {
 {
     if(_isInitialized)
     {
-        
          glBindFramebuffer(GL_FRAMEBUFFER, FBO);
 
         renderFrame();

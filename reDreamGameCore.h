@@ -31,7 +31,7 @@
 @class OERingBuffer;
 
 OE_EXPORTED_CLASS
-@interface ReDreamGameCore : OEGameCore
+@interface reDreamGameCore : OEGameCore
 @end
 
-extern __weak ReDreamGameCore *_current;
+extern __weak reDreamGameCore *_current;

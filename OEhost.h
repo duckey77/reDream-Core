@@ -44,7 +44,7 @@
  * OE host implementation
  */
 struct OE_host {
-    struct host;
+    // struct host;
 
     struct render_backend *video_rb;
 };
