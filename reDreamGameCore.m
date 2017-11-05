@@ -64,10 +64,10 @@ struct {
     { OEDCAnalogL, K_CONT_LTRIG },
     { OEDCAnalogR, K_CONT_RTRIG },
     { OEDCButtonStart, K_CONT_START },
-    { OEDCAnalogUp, K_CONT_JOYY },
-    { OEDCAnalogDown, K_CONT_JOYY },
-    { OEDCAnalogLeft, K_CONT_JOYX },
-    { OEDCAnalogRight,  K_CONT_JOYX },
+    { OEDCAnalogUp, K_CONT_Y },
+    { OEDCAnalogDown, K_CONT_Y },
+    { OEDCAnalogLeft, K_CONT_X },
+    { OEDCAnalogRight,  K_CONT_X },
 };
 
 @implementation reDreamGameCore

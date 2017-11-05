@@ -230,6 +230,7 @@
 		3ECAC44E1F68206600E212E4 /* libzlib-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8A16811F67918C00E039BF /* libzlib-static.a */; };
 		3ECAC44F1F6851F600E212E4 /* INIReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E49364E1F66474B0006F298 /* INIReader.h */; };
 		3ECAC4501F68520700E212E4 /* ini.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E4936591F66474B0006F298 /* ini.c */; };
+		3ECF6DBD1F9A72B9008E017B /* sh4_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF6DBA1F9A72B9008E017B /* sh4_mem.c */; };
 		8C74454E1786DB1E0008BE6A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC18C1785C48600647A96 /* OpenGL.framework */; };
 		8CAFC1231785B6C400647A96 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1221785B6C400647A96 /* OpenEmuBase.framework */; };
 		8CAFC1261785B6F700647A96 /* reDreamGameCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAFC1251785B6F700647A96 /* reDreamGameCore.m */; };
@@ -3083,6 +3084,13 @@
 		3ECAC3E11F681C6400E212E4 /* libflac-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libflac-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECAC4151F681D6C00E212E4 /* libcrypto-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libcrypto-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECAC4271F681D9900E212E4 /* liblzma-static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liblzma-static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ECF6DB61F9A72B8008E017B /* sh4_dbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sh4_dbg.h; sourceTree = "<group>"; };
+		3ECF6DB71F9A72B8008E017B /* sh4_ccn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sh4_ccn.h; sourceTree = "<group>"; };
+		3ECF6DB81F9A72B9008E017B /* sh4_intc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sh4_intc.h; sourceTree = "<group>"; };
+		3ECF6DB91F9A72B9008E017B /* sh4_dmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sh4_dmac.h; sourceTree = "<group>"; };
+		3ECF6DBA1F9A72B9008E017B /* sh4_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sh4_mem.c; sourceTree = "<group>"; };
+		3ECF6DBB1F9A72B9008E017B /* sh4_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sh4_mem.h; sourceTree = "<group>"; };
+		3ECF6DBC1F9A72B9008E017B /* sh4_mmu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sh4_mmu.h; sourceTree = "<group>"; };
 		8CAFA7B41785AF4200647A96 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8CAFA7B71785AF4200647A96 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		8CAFA7B81785AF4200647A96 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -3400,6 +3408,13 @@
 		3E492B261F6638D80006F298 /* sh4 */ = {
 			isa = PBXGroup;
 			children = (
+				3ECF6DB71F9A72B8008E017B /* sh4_ccn.h */,
+				3ECF6DB61F9A72B8008E017B /* sh4_dbg.h */,
+				3ECF6DB91F9A72B9008E017B /* sh4_dmac.h */,
+				3ECF6DB81F9A72B9008E017B /* sh4_intc.h */,
+				3ECF6DBA1F9A72B9008E017B /* sh4_mem.c */,
+				3ECF6DBB1F9A72B9008E017B /* sh4_mem.h */,
+				3ECF6DBC1F9A72B9008E017B /* sh4_mmu.h */,
 				3E492B271F6638D80006F298 /* sh4.c */,
 				3E492B281F6638D80006F298 /* sh4.h */,
 				3E492B291F6638D80006F298 /* sh4_ccn.c */,
@@ -9446,6 +9461,7 @@
 				3E492C181F6643120006F298 /* ir_read.c in Sources */,
 				3E492C191F6643120006F298 /* ir_write.c in Sources */,
 				3E492C1A1F6643120006F298 /* jit.c in Sources */,
+				3ECF6DBD1F9A72B9008E017B /* sh4_mem.c in Sources */,
 				3E492C1B1F6643120006F298 /* pass_stats.c in Sources */,
 				3E492C1C1F6643120006F298 /* constant_propagation_pass.c in Sources */,
 				3E492C1D1F6643120006F298 /* control_flow_analysis_pass.c in Sources */,
