@@ -30,7 +30,6 @@ void audio_push(struct host *base, const int16_t *data, int frames) {
  */
 void renderFrame() {
     /* render emulator output first */
-    //emu_render_frame(oe_emu, VIDEO_DEFAULT_WIDTH, VIDEO_DEFAULT_HEIGHT);
     emu_render_frame(oe_emu);
 }
 
